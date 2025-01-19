@@ -5,6 +5,7 @@ import os.log
 
 class ShortcutManager {
     static let shared = ShortcutManager()
+    private let logger = Logger(subsystem: Constants.Clipboard.loggerSubsystem, category: "ShortcutManager")
     
     @AppStorage("translationService") private var selectedTranslationService: TranslationServiceEnum = .google
     
